@@ -63,7 +63,7 @@
 
     let nonce = 0;
     let difficulty; //BN Use BN for things that matter because otherwise javascript will fuck you in the end.
-    let found = false, mining = false;
+    let found = false, mining = true;
 
 
     let background_mining = true;
@@ -272,7 +272,7 @@
     //Assign button controls
     OnClick("button-mine", ()=>{
         mining = true;
-        Show("button-stop",true);
+        Show("button-stop",false);
         Show("button-mine",false);
 
         mine();
